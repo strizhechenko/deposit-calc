@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
-import json
-from optparse import OptionParser
-parser = OptionParser()
 
+from optparse import OptionParser
+
+parser = OptionParser()
 parser.add_option("-p", "--bank-percent", dest="bank_percent",
                   help=u"Годовой процент вашего банка", default=8, type=float)
 parser.add_option("-i", "--initial-money", dest="initial_money",
