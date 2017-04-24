@@ -39,7 +39,7 @@ class DepositCalc(object):
         return ((money / 100) * self.options.bank_percent) / 12
 
     def main(self):
-        profit = 0
+        total_profit = 0
         bank_money = self.options.initial_money
         for month in xrange(1, self.options.monthes + 1):
             if self.options.wage_increase != 0:
@@ -48,9 +48,9 @@ class DepositCalc(object):
                 self.current_wage = self.tick_wage()
             else:
                 print "month: {0:2} | bank: {1:10.2f} | profit: {2:10.2f}".format(month, bank_money, self.tick(bank_money))
-            profit += self.tick(bank_money)
+            total_profit += self.tick(bank_money)
             bank_money += self.tick(bank_money) + self.income()
-        print 'Total profit:', profit
+        print 'Total profit:', total_profit
 
 if __name__ == '__main__':
     DepositCalc().main()
