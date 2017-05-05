@@ -21,7 +21,7 @@ class DepositCalc(object):
         parser.add_option("-w", "--wage-initial", dest="wage_initial",
                           help=u"Ваша начальная ежемесячная зарплата", type=float, default=0)
         parser.add_option("-W", "--wage-increase", dest="wage_increase",
-                          help=u"Прирост вашей зарплаты в месяц", default=0, type=float, default=0)
+                          help=u"Прирост вашей зарплаты в месяц", type=float, default=0)
         parser.add_option("-m", "--monthes", dest="monthes",
                           help=u"Сколько месяцев планируете держать вклад открытым", default=12,
                           type=int)
