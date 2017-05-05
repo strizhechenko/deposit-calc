@@ -19,14 +19,14 @@ class DepositCalc(object):
                           help=u"Сколько денег у вас есть сейчас чтобы положить в банк",
                           type=float)
         parser.add_option("-w", "--wage-initial", dest="wage_initial",
-                          help=u"Ваша начальная ежемесячная зарплата", type=float)
+                          help=u"Ваша начальная ежемесячная зарплата", type=float, default=0)
         parser.add_option("-W", "--wage-increase", dest="wage_increase",
-                          help=u"Прирост вашей зарплаты в месяц", default=0, type=float)
+                          help=u"Прирост вашей зарплаты в месяц", default=0, type=float, default=0)
         parser.add_option("-m", "--monthes", dest="monthes",
                           help=u"Сколько месяцев планируете держать вклад открытым", default=12,
                           type=int)
         parser.add_option("-o", "--outcome", dest="outcome",
-                          help=u"Каковы ваши ежемесячные расходы", type=float)
+                          help=u"Каковы ваши ежемесячные расходы", type=float, default=0)
         return parser.parse_args()
 
     def tick_wage(self):
